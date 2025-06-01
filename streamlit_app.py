@@ -20,4 +20,5 @@ if st.button("Format"):
 
 st.write('simply paste into word equation editor and press space')
 st.write('tip: use the copy button at the end of the textbox to copy without format(recommended)')
+st.image('copy.png')
 st.write('Love from 11C')
