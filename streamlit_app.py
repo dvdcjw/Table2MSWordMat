@@ -1,6 +1,19 @@
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+def table_to_str(table_text):
+    rows = table_text.strip().split('\n')
+    split_rows = [row.strip().split() for row in rows]
+    joined_rows = ['&'.join(cols) for cols in split_rows]
+    result = '@'.join(joined_rows)
+    return f'[■({result})]'
+
+st.title("Table Formatter")
+
+user_input = st.text_area("Paste your table here (each row on a new line):", height=200)
+
+if st.button("Format"):
+    if user_input.strip():
+        formatted = table_to_str(user_input)
+        st.code(formatted, language="text")
+    else:
+        st.warning("Please enter some data.")
