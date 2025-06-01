@@ -7,7 +7,7 @@ def table_to_str(table_text):
     result = '@'.join(joined_rows)
     return f'[■({result})]'
 
-st.title("Table Formatter")
+st.title("Excel spreadsheet -> Word matrix :)")
 
 user_input = st.text_area("Paste your table here (each row on a new line):", height=200)
 
@@ -17,3 +17,5 @@ if st.button("Format"):
         st.code(formatted, language="text")
     else:
         st.warning("Please enter some data.")
+
+st.write("Love from 11C")
