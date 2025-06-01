@@ -2,7 +2,7 @@ import streamlit as st
 
 def table_to_str(table_text):
     rows = table_text.strip().split('\n')
-    split_rows = [row.strip().split() for row in rows]
+    split_rows = [row.split('\t') for row in rows]
     joined_rows = ['&'.join(cols) for cols in split_rows]
     result = '@'.join(joined_rows)
     return f'[■({result})]'
