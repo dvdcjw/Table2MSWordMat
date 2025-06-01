@@ -18,5 +18,5 @@ if st.button("Format"):
     else:
         st.warning("Please enter some data.")
 
-st.write('simply past into word equation editor and press space')
+st.write('simply paste into word equation editor and press space')
 st.write('Love from 11C')
