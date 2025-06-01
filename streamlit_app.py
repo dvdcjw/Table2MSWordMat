@@ -14,7 +14,7 @@ user_input = st.text_area("Paste your table here (paste from excel):", height=20
 if st.button("Format"):
     if user_input.strip():
         formatted = table_to_str(user_input)
-        st.markdown(f"```text\n{formatted.rstrip()}\n```")
+        st.code(formatted, language="text")
     else:
         st.warning("Please enter some data.")
 
