@@ -9,7 +9,7 @@ def table_to_str(table_text):
 
 st.title("Excel spreadsheet -> Word matrix :)")
 
-user_input = st.text_area("Paste your table here (each row on a new line):", height=200)
+user_input = st.text_area("Paste your table here (paste from excel):", height=200)
 
 if st.button("Format"):
     if user_input.strip():
