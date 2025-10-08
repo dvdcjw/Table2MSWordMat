@@ -8,8 +8,8 @@ def table_to_str(table_text):
     return f'[■({result})]'
 
 st.title("Excel spreadsheet -> Word matrix :)")
-
-user_input = st.text_area(" 1. Paste your table here (paste from excel):", height=200)
+st.write("1.")
+user_input = st.text_area("Paste your table here (paste from excel):", height=200)
 
 if st.button("Format"):
     if user_input.strip():
